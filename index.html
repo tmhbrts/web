@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
@@ -9,17 +10,31 @@
         --text-highlight: #64ffc6;
         --background: #222;
       }
+      a {
+        transition: color 0.5s, text-shadow 0.5s;
+      }
+      a:link {
+        color: var(--text-highlight);
+      }
+      a:visited {
+        color: var(--text-highlight);
+      }
+      a:hover {
+        color: var(--text-default);
+        text-shadow: 0 0 10px var(--text-highlight);
+      }
+      a:active {
+        color: var(--text-highlight);
+        text-shadow: 0 0 10px var(--text-highlight);
+      }
       body {
         background-color: var(--background);
         color: var(--text-default);
         font-family: monospace;
-      }
-      .justify-center {
         display: flex;
+        flex-direction: column;
+        align-items: center;
         justify-content: center;
-      }
-      .text-center {
-        text-align: center;
       }
       .glow {
         animation: glowAnimation 4s infinite;
@@ -27,9 +42,13 @@
       .glow-2 {
         animation: glowAnimation2 4s infinite;
       }
+      .main-content {
+        text-align: center;
+        max-width: 50rem;
+      }
 
       @media (max-width: 600px) {
-        .header {
+        .ascii-title {
           font-size: 0.65rem;
         }
       }
@@ -61,16 +80,14 @@
       .main-content {
         text-align: center;
         max-width: 50rem;
-        font-size: 1rem;
-        font-weight: lighter;
         margin: auto;
       }
     </style>
     <title>Tim Huiberts</title>
   </head>
   <body>
-    <div class="justify-center">
-      <div class="header">
+    <div>
+      <div class="ascii-title">
         <pre class="glow">
 ____________            
 ___  __/__(_)______ ___ 
@@ -91,11 +108,26 @@ _  __  / / /_/ /_  / _  /_/ /  __/  /   / /_ _(__  )
     </div>
     <div class="main-content">
       <pre>
-╭─────────────────────────────╮
-│                             │
-│   Development + UX Design   │
-│                             │
-╰─────────────────────────────╯
+───//─── Development + UX Design ───//───
+      </pre>
+      <pre class="ascii-title">
+                    _         __    
+   ___  _______    (_)__ ____/ /____
+  / _ \/ __/ _ \  / / -_) __/ __(_-<
+ / .__/_/  \___/_/ /\__/\__/\__/___/
+/_/           |___/                 
+      </pre>
+      <pre>
+┌─────────────── <a href="mill-tachometer/">Mill Tachometer</a> ────────────────┐
+│                                                │
+│  Camera-based tachometer to determine the RPM  │
+│   of a mill. to be used in the assessment of   │
+│ results from a workshop in which participants  │
+│             design a windmill.                 │
+│                                                │
+│        Tools used: Processing, p5.js           │
+│                                                │
+└────────────────────────────────────────────────┘
       </pre>
     </div>
   </body>

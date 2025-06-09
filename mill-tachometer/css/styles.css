@@ -1,0 +1,14 @@
+body {
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #222;
+  font-family: monospace;
+}
+
+#canvas-container {
+  position: relative;
+}
